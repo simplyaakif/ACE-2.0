@@ -1,0 +1,33 @@
+
+.top-bar{
+    background-color:$cl-bl;
+    color:#fff;
+    padding: 1rem 0;
+    ul{
+        margin-bottom: 0;
+    }
+}
+
+nav{
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    height: 80px;
+    background-color: #fff;
+    ul{
+        margin-bottom:0px;
+        a{
+            color:inherit;
+            text-transform: uppercase;
+            font-weight: 700;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+    .static-menu{
+        display: inline-block;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,124 @@
+//Color Classes
+.cl-bl{
+    color:$cl-bl;
+}
+.cl-rd{
+    color:$cl-rd;
+}
+
+// Bottom Bars
+.bar-ct-bl{
+    &:after{
+        height: 5px;
+        width:100px;
+        content: '';
+        background-color: $cl-bl;
+        margin: 1rem auto;
+        // position: relative;
+        display: block;
+    }
+}
+
+.w7{
+    font-weight:700;
+}
+
+.sp{
+    height: 100px;
+}
+
+//Course Block
+.course-block{
+    border:1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 1px rgba(17, 17, 17, 0.1);
+    .course-img{
+        max-height: 25rem;
+        width:100%;
+        height: auto;
+    }
+    .course-others{
+        padding:0 2rem;
+        padding-top: 1.4rem;
+        h2{
+            font-weight: 700;
+            color:$cl-bl;
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            margin:0.4rem 0rem;
+        }
+    }
+    .course-details{
+        padding:0 2rem;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        i{
+            font-size: 1.8rem;
+            color: $cl-rd;
+        }
+        .course-*{
+            &:hover{
+                background-color:$cl-bl;
+                color:#fff;
+            }
+        }
+    }
+}
+
+.filter-cats{
+    .active{
+        a{
+            color: $cl_rd;
+        }
+    }
+    color:#333;
+    margin: 1.5rem 0;
+    li{
+        margin-right: 0!important;
+        text-transform:uppercase;
+        a{
+            color: inherit;
+            display: inline;
+            padding:1rem 1rem;
+            // border-right: 1px solid #ddd;
+            &:hover{
+                text-decoration: none;
+                background-color: $cl-bl;
+                color:#fff;
+            }
+        }
+    }
+}
+
+.slider{
+    background: url('../img/slider.jpg');
+    min-height: 500px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20%;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: inherit;
+    z-index: 20;
+}
+
+.service-block{
+    margin-top:-5rem;
+    border-bottom: 5px solid $cl-rd;
+    width: 100%;
+    background-color:#fff;
+    box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.2);
+    padding:3rem 1rem;
+    .service-img{
+        margin:2rem 0;
+    }
+}
+
+.course-previews{
+    margin:3rem 0;
+    background-color:#fff;
+    padding:7rem 0;
+}
