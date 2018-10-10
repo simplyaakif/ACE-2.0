@@ -15,12 +15,16 @@ p {
   font-size: 1.6rem;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, li, a, footer {
+h1, h2, h3, h4, h5, h6, p, ul, li, a, footer, div {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, p span, ul span, li span, a span, footer span {
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, p span, ul span, li span, a span, footer span, div span {
   font-size: inherit;
+}
+
+form, input, select, label {
+  font-size: 1.6rem;
 }
 
 .top-bar {
@@ -33,34 +37,67 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, p span, ul span, li span, 
   margin-bottom: 0;
 }
 
-nav {
-  height: 80px;
+.custom-nav {
   background-color: #fff;
 }
 
-nav ul {
-  margin-bottom: 0px;
+@media screen and (min-width: 768px) {
+  .custom-nav {
+    height: 80px;
+  }
 }
 
-nav ul a {
-  color: inherit;
-  text-transform: uppercase;
+.bigMenu {
+  background-color: #282373;
+  margin-left: 1rem;
+  width: 34px;
+  position: relative;
+  height: 34px;
+  color: #fff;
+  font-family: inherit;
   font-weight: 700;
+  font-size: 3rem;
+  border: 0px;
+  cursor: pointer;
+  border-radius: 50px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 10;
 }
 
-nav ul a:hover {
-  text-decoration: none;
+.bigMenu::before {
+  content: '+';
+  display: block;
+  margin-top: -9px;
+  margin-left: 6px;
 }
 
-nav .static-menu {
-  display: inline-block;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.bigMenu.active {
+  -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+  background-color: #b80404;
+}
+
+.overlay {
+  width: 34px;
+  position: absolute;
+  top: 0;
+  z-index: -3;
+  overflow: hidden;
+  display: block;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.95);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.overlay.active {
+  -webkit-transform: scale(30, 30);
+          transform: scale(30, 30);
+  overflow: hidden;
 }
 
 .bar-lt-bl:after {
@@ -375,4 +412,129 @@ nav .static-menu {
   margin: 3rem 0;
   background-color: #fff;
   padding: 7rem 0;
+}
+
+.course-details-banner {
+  padding: 3rem 0;
+  background-color: #0a081f;
+  color: #fff;
+  border-bottom: 3px solid #b80404;
+  margin-bottom: 3rem;
+}
+
+.course-details-title {
+  font-size: 3rem;
+  font-weight: 700;
+  -webkit-transition: color 0.6s;
+  transition: color 0.6s;
+}
+
+.course-details-title:hover {
+  color: yellow;
+}
+
+.course-details-fee {
+  margin: 1rem 0rem;
+  font-size: 3rem;
+  font-weight: 700;
+  display: block;
+}
+
+.course-details-btn-register-online {
+  background-color: #282373;
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  width: 100%;
+  border: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.course-details-btn-register-online:hover {
+  background-color: #b80404;
+  cursor: pointer;
+}
+
+.course-details-long-panel {
+  background-color: #fff;
+  padding: 3rem 3rem;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #282373;
+}
+
+.course-details-vid {
+  margin: -3rem -3rem 0 -3rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.course-details-long-description {
+  margin-bottom: 3rem;
+}
+
+.course-details-features .nav-tabs {
+  margin-bottom: 1rem;
+}
+
+.course-details-features .nav-tabs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.course-details-features .nav-tabs a:hover {
+  text-decoration: none;
+  border: 1px solid #dee2e6;
+  border-bottom: 1px solid #b80404;
+  color: #b80404;
+}
+
+.course-details-features .nav-tabs .nav-link.active {
+  background-color: transparent;
+  color: #b80404;
+}
+
+.course-details .card-header {
+  background-color: #b80404;
+}
+
+.course-details .card-header a {
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.course-details .card-body {
+  padding: 0;
+}
+
+.course-details-curriculum {
+  margin-bottom: 0;
+}
+
+.course-details-curriculum li {
+  padding: 0.8rem 1.6rem;
+}
+
+.course-details-curriculum li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.course-details .card {
+  margin-bottom: 0.2rem;
+}
+
+.course-features-tab-titles {
+  margin: 1.3rem 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.course-features-tab-titles:hover {
+  color: #b80404;
 }

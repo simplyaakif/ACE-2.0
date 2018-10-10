@@ -8,26 +8,61 @@
     }
 }
 
-nav{
-    // display: flex;
-    // justify-content: center;
-    // flex-direction: column;
-    height: 80px;
+.custom-nav{
     background-color: #fff;
-    ul{
-        margin-bottom:0px;
-        a{
-            color:inherit;
-            text-transform: uppercase;
-            font-weight: 700;
-            &:hover{
-                text-decoration: none;
-            }
-        }
+}
+
+@media screen and (min-width:768px){
+    .custom-nav{
+        height: 80px;
     }
-    .static-menu{
-        display: inline-block;
-        flex-direction: row;
-        justify-content: space-between;
+}
+
+.bigMenu{
+    background-color: $cl-bl;
+    margin-left: 1rem;
+    width: 34px;
+    position: relative;
+    height: 34px;
+    color:#fff;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 3rem;
+    border:0px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .5s;
+    z-index: 10;
+    &::before{
+        content: '+';
+        display:block;
+        margin-top: -9px;
+        margin-left: 6px;
     }
+    &:hover{
+        // transform: scale(100,100);
+    }
+}
+
+.bigMenu.active{
+    transform: rotate(405deg);
+    background-color: $cl-rd;
+}
+
+.overlay{
+    width: 34px;
+    position: absolute;
+    top:0;
+    z-index: -3;
+    overflow: hidden;
+    display: block;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.95);
+    transition: transform 0.5s;
+}
+
+.overlay.active{
+    transform:scale(30,30);
+    overflow:hidden;
 }

@@ -17,12 +17,16 @@ p{
     font-weight: 400;
 }
 //
-*{
+*,{
     font-size:1.6rem;
 }
-h1,h2,h3,h4,h5,h6,p,ul,li,a,footer{
+h1,h2,h3,h4,h5,h6,p,ul,li,a,footer,div{
     font-family: 'Roboto Condensed', sans-serif;
     span{
         font-size: inherit;
     }
+}
+
+form,input,select,label{
+    font-size:1.6rem;
 }
