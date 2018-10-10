@@ -8,6 +8,9 @@
         margin-bottom: 3rem;
          
     }
+    &-right-panel{
+        margin-top:-15rem;
+    }
     &-title{
         font-size: 3rem;
         font-weight: 700;
@@ -69,13 +72,18 @@
         }
         }
     }
+
     .card-header{
-        background-color: $cl-rd;
+        background-color: rgba($cl-rd,1);
+        transition: all 1s;
         a{
             font-weight: 700;
             color:#fff;
             text-transform: uppercase;
             text-decoration: none;
+        }
+        &:hover{
+            background-color: rgba($cl-bl,1);
         }
     }
     .card-body{

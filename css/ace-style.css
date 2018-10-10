@@ -422,6 +422,10 @@ form, input, select, label {
   margin-bottom: 3rem;
 }
 
+.course-details-right-panel {
+  margin-top: -15rem;
+}
+
 .course-details-title {
   font-size: 3rem;
   font-weight: 700;
@@ -497,6 +501,8 @@ form, input, select, label {
 
 .course-details .card-header {
   background-color: #b80404;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .course-details .card-header a {
@@ -504,6 +510,10 @@ form, input, select, label {
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.course-details .card-header:hover {
+  background-color: #282373;
 }
 
 .course-details .card-body {
